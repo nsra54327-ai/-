@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      (function() {
+        try {
+          var desc = Object.getOwnPropertyDescriptor(window, 'fetch') || 
+                     (Object.getPrototypeOf(window) && Object.getOwnPropertyDescriptor(Object.getPrototypeOf(window), 'fetch'));
+          if (desc && desc.get && !desc.set) {
+            var _fetch = desc.get.call(window);
+            Object.defineProperty(window, 'fetch', {
+              get: function() { return _fetch; },
+              set: function(v) { _fetch = v; },
+              configurable: true,
+              enumerable: true
+            });
+          }
+        } catch (e) {
+          // ignore
+        }
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Google AI Studio App</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

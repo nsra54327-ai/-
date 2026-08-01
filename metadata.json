@@ -1,0 +1,6 @@
+{
+  "name": "فيلم إعلاني",
+  "description": "منصة احترافية متكاملة لابتكار وتحليل الإعلانات التجارية السينمائية والقصصية بأحدث تقنيات الرؤية الحاسوبية والذكاء الاصطناعي وبأسلوب استوديوهات هوليود",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
